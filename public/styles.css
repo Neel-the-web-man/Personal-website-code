@@ -1,0 +1,760 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+html{
+    height: 100%;
+}
+body {
+    background-image: url("./Website-background.jpg");
+    background-size: cover;
+    background-position: center top;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    display: flex;
+    background-color: black;
+    justify-content: flex-end;
+}
+
+.page-heading {
+    color: white;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-family: 'Baloo Da 2', cursive;
+}
+
+#logo {
+    margin-left: 10px;
+    height: 80px;
+    width: 80px;
+    align-self: center;
+    margin-right: auto;
+    filter: invert(100%);
+}
+
+#logo-link {
+    margin-right: auto;
+}
+.logo-link-div{
+    margin-right: auto;
+}
+nav {
+    align-self: center;
+    margin-right: 20px;
+}
+
+nav ul {
+    display: flex;
+}
+
+nav ul li {
+    list-style-type: none;
+    margin: 0px 10px 0px 10px;
+    transition: all 0.8s ease-in-out;
+    padding: 2px 0px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-family: 'Baloo Da 2', cursive;
+    font-size: large;
+    padding: 8px 10px;
+    position: relative;
+}
+
+nav ul li a::after {
+    content: "";
+    position: absolute;
+    background: #ff6b6b;
+    left: 50%;
+    height: 3px;
+    bottom: 0%;
+    width: 0%;
+    transition: all 0.5s ease;
+    border-radius: 10px;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+    left: 0%;
+    color: rgb(235, 235, 235);
+}
+
+nav ul li:hover {
+    background-color: rgb(84, 84, 84);
+    color: rgb(232, 232, 232);
+    border-radius: 8px;
+    /* padding: 15px 10px; */
+    transition: border 0.4s;
+}
+#hambugerIcon{
+    height: 45px;
+    width: 45px;
+    filter: invert(100%);
+    display: none;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-bottom: 20px;
+}
+.submitted-ejs-container{
+    height: 100%;
+}
+#resubmit-container{
+    height: 100%;
+}
+.submitOne-container{
+    height: 100%;
+}
+.home-container{
+    height: 100%;
+    padding: 10px;
+}
+.about-container{
+    height: 500px;
+}
+.name {
+    font-size: 50px;
+    color: white;
+    align-self: center;
+    font-family: 'Baloo Da 2', cursive;
+    margin-bottom: 10px;
+    padding-top: 15px;
+}
+
+.intro {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Baloo Da 2', cursive;
+}
+
+#name-intro {
+    color: white;
+    font-size: 23px;
+    font-family: 'Baloo Da 2', cursive;
+    align-self: center;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.skill-logo {
+    height: 50px;
+    width: 50px;
+    align-self: center;
+    margin: 10px 5px;
+    border-radius: 100%;
+    height: 50px;
+}
+
+.html-logo {
+    border-radius: 0px;
+}
+
+.css-logo {
+    border-radius: 0px;
+}
+
+.mongoDB-logo {
+    width: 50px;
+    border-radius: 100%;
+}
+
+.mongoose-logo {
+    border-radius: 0px;
+    background-color: white;
+}
+
+.bootstrap-logo {
+    border-radius: 0px;
+}
+
+.databases-logo {
+    border-radius: 0px;
+}
+
+.social-icons {
+    margin-top:20px;
+    display: flex;
+    align-self: center;
+}
+.social-icons a{
+    font-family: 'Baloo Da 2', cursive;
+    width: 40px;
+    padding: 7px;
+    text-decoration: none;
+    margin: 5px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    transition:all 0.1s linear;
+}
+.social-icons a div{
+    color: white;
+    display: flex;
+}
+.social-icons a div span{
+    display:none;
+    align-self: center;
+    justify-content: center;
+    text-align: center;
+}
+.social-icons a:hover{
+    z-index: 1;
+    min-width: 110px;
+    color: white;
+}
+.social-icons a:hover div span{
+    display: block;
+} 
+#facebook-logo{
+    height: 27px;
+    width: 27px;
+    border-radius: 100%;
+    margin-right: 10px;
+}
+#twitter-logo{
+    height: 27px;
+    width: 27px;
+    border-radius: 100%;
+    margin-right: 10px;
+}
+#instagram-logo{
+    height: 27px;
+    width: 27px;
+    border-radius: 500%;
+    margin-right: 10px;
+}
+#github-logo {
+    height: 27px;
+    width: 27px;
+    border-radius: 100%;
+    margin-right: 10px;
+}
+#facebook-logo {
+    height: 27px;
+    width: 27px;
+    border-radius: 100%;
+    margin-right: 10px;
+}
+
+#linkedIn-logo {
+    margin-right: 5px;
+    height: 27px;
+    width: 27px;
+    border-radius: 100%;
+}
+.instagram-logo-anchor-tag{
+    background-color: #E1306C;
+}
+.instagram-logo-anchor-tag:hover{
+    width: 130px;
+    background-color: #E1306C;
+}
+.twitter-logo-anchor-tag{
+    background-color: #1DA1F2;
+}
+.twitter-logo-anchor-tag:hover{
+    width: 100px;
+    background-color: #1DA1F2;
+}
+.facebook-logo-anchor-tag{
+    background-color: #4267B2;
+}
+.facebook-logo-anchor-tag:hover{
+    background-color: #4267B2;
+    width: 130px;
+}
+.github-logo-anchor-tag{
+    background-color: rgb(36, 36, 36);
+}
+.linkedIn-logo-anchor-tag{
+    background-color: #2867B2;
+}
+
+.skill-page {
+    display: flex;
+    flex-direction: column;
+    min-height: 500px;
+    justify-content: center;
+}
+
+.skill-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.skill-box {
+    display: flex;
+    text-align: center;
+    width: 50%;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+.skills{
+    width: 160px;
+}
+
+.skills {
+    border: 3px solid white;
+    color: white;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    font-family: 'Baloo Da 2', cursive;
+    justify-content: center;
+    margin: 5px;
+    border-radius: 7px;
+}
+
+.skills:hover {
+    color: rgb(116, 218, 255);
+    background-color: rgb(53, 53, 53);
+    text-decoration: underline;
+    text-decoration-color: rgb(116, 218, 255);
+    text-decoration-thickness: 3px;
+    border-color: rgb(116, 218, 255);
+    width: 170px;
+    height:100px;
+}
+
+.mongoose-box {
+    padding-bottom: auto;
+}
+
+#submitAgain-IdHeading {
+    color: white;
+    align-items: center;
+    align-self: center;
+    justify-content: center;
+    font-family: 'Baloo Da 2', cursive;
+    text-align: center;
+}
+#submittedHeading {
+    color: white;
+    justify-content: center;
+    align-self: center;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#submitAgain-IdAnchorTag {
+    align-items: center;
+    align-self: center;
+    color: rgb(255, 255, 255);
+    background-color: rgb(97, 94, 255);
+    font-family: 'Baloo Da 2', cursive;
+    font-size: large;
+    padding: 8px;
+    border-radius: 3px;
+    margin-left: 5px;
+    text-decoration: none;
+    transition: all 0.5s ease;
+}
+#submitAgain-IdAnchorTag:hover {
+    color:white;
+    background-color: rgb(118, 116, 255);
+}
+
+.alert-success {
+    background-color: rgb(148, 253, 148);
+    margin-top: 0px;
+    display: flex;
+    /* font-weight: 400; */
+}
+
+.alert-success P {
+    color: rgb(1, 130, 1);
+    padding: 3px 5px;
+    align-self: center;
+}
+
+.alert-failure {
+    font-weight: bold;
+    background-color: rgb(255, 144, 136);
+    display: flex;
+}
+
+.alert-failure P {
+    color: rgb(255, 33, 33);
+    padding: 3px 5px;
+    align-self: center;
+}
+
+.invalid {
+    border: 2px solid rgb(255, 47, 47);
+}
+
+#invalid-feedback-name, #invalid-feedback-email, #invalid-feedback-message {
+    margin-top: 2px;
+    color: rgb(252, 36, 36);
+    font-size: small;
+    margin-bottom: 8px;
+    background-color: rgb(255, 145, 145);
+    width: 85%;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 2px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 5px;
+}
+
+.delete-alert {
+    margin-left: auto;
+    cursor: pointer;
+    margin-right: 7px;
+}
+
+.contact-form-box {
+    display: flex;
+    justify-content: center;
+    font-family: 'Baloo Da 2', cursive;
+}
+
+.contact-form {
+    padding: 10px;
+    padding-top: 15px;
+    display: flex;
+    border: 4px solid white;
+    border-radius: 6px;
+    flex-direction: column;
+    align-self: center;
+    font-family: 'Baloo Da 2', cursive;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 400px;
+    height: 400px;
+}
+
+.form-elements {
+    justify-content: center;
+    background-color: rgb(252, 252, 252);
+    /* background-color: white; */
+    font-family: 'Baloo Da 2', cursive;
+    border-radius: 5px;
+    padding: 6px;
+    /* border: 1px solid black; */
+    margin: 0px 6px;
+    width: 85%;
+    font-size: large;
+    outline: none;
+    margin-bottom: 5px;
+}
+
+.name-input {
+    margin-top: auto;
+}
+
+.contact-textarea {
+    font-family: 'Baloo Da 2', cursive;
+    min-width: 85%;
+    max-width: 85.001%;
+    max-height: 79px;
+    min-height: 79.01px;
+}
+
+.submit-btn {
+    font-family: 'Baloo Da 2', cursive;
+    margin-top: 0px;
+    padding: 2px;
+    width: 30%;
+    background-color: rgb(114, 253, 240);
+    border: none;
+    margin-bottom: auto;
+    margin-top: auto;
+    cursor: pointer;
+}
+
+.submit-btn:hover {
+    background-color: turquoise;
+}
+
+.about-box {
+    font-family: 'Baloo Da 2', cursive;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 20px;
+}
+
+.about-inner-box {
+    width: 60%;
+}
+
+.about-intro {
+    color: white;
+    text-align: center;
+    font-size: 21px;
+}
+
+.project-title {
+    padding-top: 20px;
+    font-family: 'Baloo Da 2', cursive;
+}
+
+.project-cards {
+    display: flex;
+    justify-content: center;
+    height: auto;
+    flex-wrap: wrap;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 40px;
+    width: 90%;
+}
+
+.project-card {
+    border: 2px solid white;
+    width: 300px;
+    text-align: center;
+    font-family: 'Baloo Da 2', cursive;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    margin: 10px 10px;
+}
+
+.project-topic {
+    color: white;
+    padding-bottom: 10px;
+    font-family: 'Baloo Da 2', cursive;
+}
+
+.project-image {
+    width: 80%;
+    height: 100px;
+    padding-bottom: 5px;
+}
+
+.card-image-div {
+    border-bottom: 2px solid white;
+}
+
+.card-description {
+    font-family: 'Baloo Da 2', cursive;
+    color: white;
+    padding: 15px 0px;
+    margin-bottom: auto;
+}
+
+#project-github-link {
+    margin-top: 10px;
+    padding: 3px;
+    display: flex;
+    align-items: center;
+    border: 2px solid black;
+    justify-content: center;
+    width: 40%;
+    align-self: center;
+    list-style-type: none;
+    text-decoration: none;
+    background-color: rgb(237, 237, 237);
+    margin-top: auto;
+}
+
+#project-github-link:hover {
+    background-color: gray;
+}
+#project-github-link:hover div #link-para{
+    color: rgb(252, 252, 252);
+}
+
+#link-para {
+    font-family: 'Baloo Da 2', cursive;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+
+
+.github-project-logo {
+    height: 25px;
+    width: 25px;
+    border-radius: 100%;
+    margin-bottom: auto;
+}
+.contact-social-icons-for-margin-bottom{
+    margin-bottom: 25px;
+}
+.git-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.resubmit-headers {
+    color: white;
+    text-align: center;
+    font-family: 'Baloo Da 2', cursive;
+    margin-top: 20px;
+}
+
+.resubmit-contact-page-heading {
+    margin-top: 10px;
+}
+
+footer {
+    color: white;
+    background-color: black;
+    padding: 20px;
+    text-align: center;
+    margin-top: auto;
+}
+@media only screen and (max-width:2000px){
+    .skill-box{
+        width:  658px;
+    }
+}
+@media only screen and (max-width:1100px){
+    .project-cards{
+        padding: 0px 30px;
+    }
+    .project-card {
+        width: 250px;
+    }
+}
+@media only screen and (max-width:1025px){
+    .skill-box{
+        width: 60%;
+    }
+}
+@media only screen and (max-width:850px){
+    .skill-box{
+        width: 70%;
+    }
+}
+@media only screen and (max-width:800px){
+    .contact-form{
+        width: 55%;
+    }
+    .about-box{
+        flex-wrap: wrap;
+    }
+}
+@media only screen and (max-width:730px){
+    .skill-box{
+        width: 80%;
+    }
+}
+
+@media only screen and (max-width:700px){
+    .responsiveNavbar{
+        height: 270px;
+    }
+    #hambugerIcon{
+        display: block;
+        margin-top: 20px;
+        margin-right: 20px;
+    }
+    .navbarlists{
+        display: flex;
+        margin-right: auto;
+        padding-top: 50px;
+        padding-right: 20px;
+    }
+    .navbarlistsul{
+        display: flex;
+        align-self: center;
+        flex-direction: column;
+        text-align: center;
+    }
+    .headerClass{
+        opacity: 0.85;
+    }
+    nav{
+        display: none;
+    }
+    .contact-form{
+        width: 380px;
+    }
+    .about-inner-box{
+        width: 70%;
+    }
+    .about-intro #text{
+        font-size: 115%;
+        width: 70%;
+    }
+    footer{
+        font-size: 90%;
+    }
+    #name-intro{
+        font-size: 130%;
+    }
+    .name{
+        font-size: 230%;
+    }
+}
+@media only screen and (max-width:640px){
+    .skill-box{
+        width: 85%;
+    }
+}
+@media only screen and (max-width:600px){
+    .about-inner-box{
+        width: 80%;
+    }
+    .about-intro #text{
+        width: 80%;
+    }
+    .about-intro {
+        font-size: 110%;
+    }
+    #name-intro{
+        font-size: 130%;
+    }
+    .name{
+        font-size: 230%;
+    }
+    .contact-form{
+        width: 60%;
+        height: 360px;
+    }
+    .skill-box{
+        width: 85%;
+    }
+    .skills{
+        width: 150px;
+    }
+    .github-logo,.linkedIn-logo {
+        height: 27px;
+        width: 27px;
+    }
+}
+@media only screen and (max-width:500px){
+    .about-intro{
+        font-size: 105%;
+    }
+    .name{
+        font-size: 200%;
+    }
+    #name-intro{
+        font-size: 110%;
+    }
+    footer{
+        font-size: 70%;
+    }
+    .contact-form{
+        width: 70%;
+    }
+}
+@media only screen and (max-width:400px){
+    .contact-form{
+        width: 80%;
+    }
+}
+@media only screen and (max-width:380px){
+.skill-box{
+    width: 95%;
+}
+}

@@ -1,0 +1,12 @@
+<script>
+    const hamburgerIcon=document.getElementById("hambugerIcon");
+    const navbar=document.getElementById("navbar");
+    const navbarUl=document.getElementById("navbar-ul");
+    const header=document.getElementById("header");
+    hamburgerIcon.addEventListener("click",()=>{
+        navbar.classList.toggle("responsiveNavbar");
+        navbar.classList.toggle("navbarlists");
+        navbarUl.classList.toggle("navbarlistsul");
+        header.classList.toggle("headerClass");
+    });
+</script>

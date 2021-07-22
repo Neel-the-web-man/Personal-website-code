@@ -1,0 +1,99 @@
+<script>
+    const name=document.getElementById("name");
+    const email=document.getElementById("email");
+    const message=document.getElementById("message"); 
+    const submit=document.getElementById("submit");
+    let validName=false;
+    let validEmail=false;
+    let validMessage=false;
+    name.addEventListener("blur",()=>{
+        // console.log("name is blurred");
+        let regex=/^[a-zA-Z]([a-zA-Z]){2,30}$/
+        let str=name.value;
+        // console.log(regex,str);
+        if(regex.test(str)){
+            // console.log("Matched");
+            name.classList.remove("invalid");
+            const invalidFeedback=document.getElementById("invalid-feedback-name");
+            invalidFeedback.innerHTML="";
+            validName=true;
+        }else{
+            validName=false;
+            // console.log("not mathched");
+            name.classList.add("invalid");
+            const invalidFeedback=document.getElementById("invalid-feedback-name");
+            invalidFeedback.innerHTML="Please enter a proper name";
+        }
+    })
+    email.addEventListener("blur",()=>{
+        // console.log("email is blurred");
+        let regex=/^([_\-\.a-zA-Z0-9+]+)@([_\-\.a-zA-Z0-9]+)\.([a-zA-z]){2,10}$/
+        let str=email.value;
+        // console.log(regex,str);
+        if(regex.test(str)){
+            // console.log("Matched");
+            email.classList.remove("invalid");
+            const invalidFeedback=document.getElementById("invalid-feedback-email");
+            invalidFeedback.innerHTML="";
+            validEmail=true;
+        }else{
+            validEmail=false;
+            // console.log("not mathched");
+            email.classList.add("invalid");
+            const invalidFeedback=document.getElementById("invalid-feedback-email");
+            invalidFeedback.innerHTML="Kindly enter a valid E-mail";
+        }
+    })
+    message.addEventListener("blur",()=>{
+        // console.log("message is blurred");
+        const invalidFeedback=document.getElementById("invalid-feedback-message");
+        let regex=""
+        let str=message.value;
+        if(regex===str){
+            // console.log("error");
+            // console.log(str);
+            message.classList.add("invalid");
+            invalidFeedback.innerHTML="Kindly drop a message";
+            validMessage=false;
+        }else{
+            validMessage=true;
+            // console.log(str);
+            // console.log("success");
+            invalidFeedback.innerHTML="";
+            message.classList.remove("invalid");
+        }
+    })
+    submit.addEventListener("click",(e)=>{
+        let success=document.getElementById("success");
+        let failure=document.getElementById("failure");
+        // let contactContainer=document.getElementById("contact-container");
+        // let submitAgainIdHeading=document.getElementById("submitAgain-IdHeading");
+        if(validName && validEmail && validMessage){
+            failure.classList.remove("alert-failure");
+            failure.innerHTML="";
+            // let AnchorTag=document.createElement("a");
+            // AnchorTag.innerHTML="Resubmit";
+            // AnchorTag.id="submitAgain-IdAnchorTag";
+            // AnchorTag.setAttribute("href","/resubmit");
+            // let elemBefore=contactContainer.children[1];
+            // contactContainer.insertBefore(AnchorTag,elemBefore);
+            // submitAgainIdHeading.innerHTML="Want to submit Again?";
+            // console.log("success");
+        }else{
+            failure.classList.add("alert-failure");
+            failure.innerHTML="<p><strong>Failure! </strong> Your Form hasn't been submitted. Kindly Fill the form correctly</p><p>&times;</p>";
+            failure.lastElementChild.className="delete-alert";
+            failure.lastElementChild.id="alert-delete-button";
+            // console.log("failure");
+            e.preventDefault();
+        }
+        let alertDeleteButton=document.getElementById("alert-delete-button");
+        alertDeleteButton.addEventListener("click",()=>{
+            success.classList.remove("alert-success");
+            success.innerHTML="";
+            failure.classList.remove("alert-failure");
+            failure.innerHTML="";
+        });
+    })
+// console.log(name,email,message);
+</script>

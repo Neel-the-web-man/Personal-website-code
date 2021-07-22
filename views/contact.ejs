@@ -1,0 +1,25 @@
+<%-include("header")-%>
+<div  id="success">
+    <!-- <p><strong>Success! </strong> Your form has been successfully submitted.</p> -->
+    <!-- <p class="delete-alert">&times;</p> -->
+</div>
+<div  id="failure">
+</div>
+<div class="container" id="contact-container">
+    <h1 class="page-heading" id="contact-page-heading">Contact</h1>
+    <div class="contact-form-box" id="contact-form-box">
+        <form class="contact-form" id="contact-form" action="/contact" method="POST" > 
+            <input class="form-elements name-input" id="name" name="name" autocomplete="off" type="text" placeholder="Enter Your Name">
+            <small id="invalid-feedback-name" class="invalid-feedback"></small>
+            <input class="form-elements email-input" id="email" name="email" autocomplete="off" type="text" placeholder="Enter Your E-mail">
+            <small id="invalid-feedback-email" class="invalid-feedback"></small>
+            <textarea class="form-elements contact-textarea" id="message" name="message" rows="3" type="text" placeholder="Enter Your Message"></textarea>
+            <small id="invalid-feedback-message" class="invalid-feedback"></small>
+            <button class="form-elements submit-btn" id="submit" type="submit">Submit</button>
+        </form>
+    </div>
+    <%-include("social-icons")-%>
+</div>
+<%-include("contact-script")-%>
+<%-include("hamburgerToggle")-%>
+<%-include("footer")-%>
